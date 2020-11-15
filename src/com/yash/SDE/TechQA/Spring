@@ -1,0 +1,59 @@
+Spring Interview Technical Questions
+
+1.What is Spring?
+Spring Framework is an open-source framework for building web applications with Java as a programming language.
+It is powerful and lightweight yet easy to use, and it provides support for developing Java applications easily.
+Spring is a lightweight framework which can be thought of as a framework of frameworks because it also offers support for various frameworks such as hibernate, struts, tapestry, and JSF.
+
+2.Advantages of Spring Framework?
+There are many advantages of Spring Framework. They are as follows:
+
+*) Predefined Templates
+Spring framework provides templates for JDBC, Hibernate, JPA etc. technologies.
+So there is no need to write too much code.
+It hides the basic steps of these technologies.
+
+Let's take the example of JdbcTemplate, you don't need to write the code for exception handling, creating connection, creating statement, committing transaction, closing connection etc.
+You need to write the code of executing query only.
+Thus, it save a lot of JDBC code.
+
+*) Loose Coupling
+The Spring applications are loosely coupled because of dependency injection.
+
+*) Easy to test
+The Dependency Injection makes easier to test the application.
+The EJB or Struts application require server to run the application but Spring framework doesn't require server.
+
+*) Lightweight
+Spring framework is lightweight because of its POJO implementation.
+The Spring Framework doesn't force the programmer to inherit any class or implement any interface.
+That is why it is said non-invasive.
+
+*) Fast Development
+The Dependency Injection feature of Spring Framework and it support to various frameworks makes the easy development of JavaEE application.
+
+*) Powerful abstraction
+It provides powerful abstraction to JavaEE specifications such as JMS, JDBC, JPA and JTA.
+
+*) Declarative support
+It provides declarative support for caching, validation, transactions and formatting.
+
+3.What is the current version of Spring?
+The current latest version is Spring 5.2.7
+
+4.What are the features of Spring versions?
+Spring 4
+-Support for Java 8
+-Servlet 3.0 is Strongly Recommended for Spring 4
+-Hibernate 4.3 Support
+-@RestController
+-spring-messaging: This modules supports STOMP (Simple (or Streaming) Text Orientated Messaging Protocol).
+
+Spring 5
+-Java Baseline Support
+-Core API Enhancements
+-Spring Web MVC Enhancements
+-Spring WebFlux
+-Functional Programming with Kotlin Support
+-Testing Improvements
+-Deprecated Support and Removed Packages

@@ -1,0 +1,109 @@
+Hibernate Technical Interview Questions
+
+1.What is Hibernate?
+  Hibernate is an open source lightweight tool.
+
+  It is one of the most popular Java framworks that simplofy the development of Java application to interact with the database.
+
+  It is an Object-relational mapping (ORM) tool.
+
+  It is referred as a framework which comes with an abstraction layer and also handles the implementations internally.
+
+  The implementations include tasks like writing a query for CRUD operations or establishing a connection with the databases, etc.
+
+2.What is ORM?
+  It is basically a technique that maps the object that is stored in the database.
+
+  An ORM tool helps in simplifying data creation, manipulation, and access.
+
+  It internally uses the Java API to interact with the databases.
+
+3. What are the major advantages of Hibernate Framework?
+  It is open-sourced and lightweight.
+
+  Performance of Hibernate is very fast.
+
+  Helps in generating database independant queries.
+
+  Provides facilities to automatically create a table.
+
+  It provides query statistics and database status.
+
+4. What are the advantages of using Hibernate over JDBC?
+
+  Hibernate eliminates a lot of boiler-plate code that comes with JDBC API, the code looks cleaner and readable.
+
+  This Java framework supports inheritance, associations, and collections. These features are actually not present in JDBC.
+
+  HQL (Hibernate Query Language) is more object-oriented and close to Java. But for JDBC, you need to write native SQL queries.
+
+  Hibernate implicitly provides transaction management whereas, in JDBC API, you need to write code for transaction management using commit and rollback.
+
+  JDBC throws SQLException that is a checked exception, so you have to write a lot of try-catch block code. Hibernate wraps JDBC exceptions and throw JDBCException or HibernateException which are the unchecked exceptions, so you don’t have to write code to handle it has built-in transaction management which helps in removing the usage of try-catch blocks.
+
+5. What is HQL?
+  HQL is the acronym of Hibernate Query Language. It is an Object-Oriented Query Language and is independent of the database.
+
+6.How to achieve mapping in Hibernate?
+  Association mappings are one of the key features of Hibernate. It supports the same associations as the relational database model. They are:
+
+  One-to-One associations
+  Many-to-One associations
+  Many-to-Many associations
+
+7.Name some of the important interfaces of Hibernate framework?
+  Hibernate interfaces are:
+
+  SessionFactory (org.hibernate.SessionFactory)
+  Session (org.hibernate.Session)
+  Transaction (org.hibernate.Transaction)
+
+8.What do you mean by Hibernate Configuration File?
+  Hibernate Configuration File mainly contains database-specific configurations and are used to initialize SessionFactory.
+  Some important parts of the Hibernate Configuration File are Dialect information, so that hibernate knows the database type and mapping file or class details.
+
+9.What is JPA?
+  Java Persistence API (JPA) is a Java specification that provides certain functionality and standard to ORM tools.
+  The javax.persistence package contains the JPA classes and interfaces.
+
+10.Elements of Hibernate Architecture
+   For creating the first hibernate application, we must know the elements of Hibernate architecture. They are as follows:
+   SessionFactory
+   The SessionFactory is a factory of session and client of ConnectionProvider.
+   It holds second level cache (optional) of data.
+   The org.hibernate.SessionFactory interface provides factory method to get the object of Session.
+
+   Session
+   The session object provides an interface between the application and data stored in the database.
+   It is a short-lived object and wraps the JDBC connection. It is factory of Transaction, Query and Criteria.
+   It holds a first-level cache (mandatory) of data. The org.hibernate.Session interface provides methods to insert, update and delete the object.
+   It also provides factory methods for Transaction, Query and Criteria.
+
+   Transaction
+   The transaction object specifies the atomic unit of work. It is optional.
+   The org.hibernate.Transaction interface provides methods for transaction management.
+
+   ConnectionProvider
+   It is a factory of JDBC connections.
+   It abstracts the application from DriverManager or DataSource. It is optional.
+
+   TransactionFactory
+   It is a factory of Transaction.
+   It is optional.
+
+11. Mention some important annotations used for Hibernate mapping?
+   Hibernate supports JPA annotations. Some of the major annotations are:
+
+   javax.persistence.Entity: This is used with model classes to specify they are entity beans.
+
+   javax.persistence.Table: It is used with entity beans to define the corresponding table name in the database.
+
+   javax.persistence.Access: Used to define the access type, field or property. The default value is field and if you want Hibernate to use the getter/setter methods then you need to set it to a property.
+
+   javax.persistence.Id: Defines the primary key in the entity bean.
+
+   javax.persistence.EmbeddedId: It defines a composite primary key in the entity bean.
+
+   javax.persistence.Column: Helps in defining the column name in the database table.
+
+   javax.persistence.GeneratedValue: It defines the strategy to be used for the generation of the primary key. It is also used in conjunction with javax.persistence.GenerationType enum.
